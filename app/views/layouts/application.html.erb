@@ -12,7 +12,10 @@
   </head>
 
   <body>
-    <main class="container">
+    <main class="container mx-auto max-w-full">
+      <% if current_user.present? %>
+        <%= render partial: 'shared/navbar' %>
+      <% end %>
       <%= yield %>
     </main>
   </body>
